@@ -20,6 +20,9 @@ class GreekGetter:
 
 
 class EnglishGetter:
+    def __init__(self):
+        pass
+
     def get(self, msgid):
         return str(msgid)
 
@@ -31,4 +34,5 @@ def get_localizer(language="English"):  # 确定选取某个工厂生产,languag
 
 e, g = get_localizer("English"), get_localizer("Greek")
 for msgid in "dog parrot cat bear".split():
-    print(e.get(msgid), g.get(msgid))
+    print(e.get(msgid))
+    print(g.get(msgid))
